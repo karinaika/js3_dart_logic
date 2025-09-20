@@ -1,9 +1,12 @@
 import 'dart:io';
 
 void main() {
-  print("Program Dart");
   stdout.write("Masukkan angka: ");
   int angka = int.parse(stdin.readLineSync()!);
 
-  print("Anda memasukkan angka: $angka");
+  int faktorial = 1;
+  for (int i = 1; i <= angka; i++) {
+    faktorial *= i;
+  }
+  print("Faktorial dari $angka adalah $faktorial");
 }
